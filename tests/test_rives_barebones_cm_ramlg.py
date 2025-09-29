@@ -13,7 +13,7 @@ from model import *
 # test application setup
 @pytest.fixture(scope='module')
 def app_client() -> TestClient:
-    os.environ['MACHINE_CONFIG'] = '{"ram-length":"40Mi"}'
+    os.environ['MACHINE_CONFIG'] = '{"ram_length":"40Mi"}'
     client = TestClient()
     yield client
     del os.environ['MACHINE_CONFIG']

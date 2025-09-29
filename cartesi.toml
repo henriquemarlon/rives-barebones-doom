@@ -2,14 +2,15 @@
 ram-length = "256Mi"
 user = "root"
 entrypoint = "exec /mnt/app/rives-barebones"
-final-hash = "true"
+use_docker_env = false # cartesi cli option to avoid using docker rootfs envs
 
 [drives.root]
 builder = "docker"
 dockerfile = "rootfs.dockerfile"
 format = "ext2"
-avoid-overwrite = "true"
-extra-size = "2Mb"
+avoid_overwrite = "true"
+extra_size = "2Mb"
+buildx = true
 
 [drives.app]
 builder = "docker"

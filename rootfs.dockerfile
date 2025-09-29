@@ -55,3 +55,5 @@ EOF
 COPY cartridges /cartridges
 
 RUN adduser -D app app 2>/dev/null
+
+WORKDIR /mnt/app

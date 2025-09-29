@@ -22,7 +22,7 @@ Install Cartesapp:
 ```shell
 python3 -m venv .venv
 . .venv/bin/activate
-pip3 install cartesapp[dev]@git+https://github.com/prototyp3-dev/cartesapp@main
+pip3 install cartesapp[dev]@git+https://github.com/prototyp3-dev/cartesapp@v1.1.0
 pip3 install pytest-randomly
 ```
 
@@ -54,7 +54,7 @@ make -f src/Makefile build
 Then run make the node in dev mode:
 
 ```shell
-cartesapp node --log-level debug --dev --dev-watch-patterns='*' --dev-path='./src/dist' --drive-config app.builder=directory --drive-config app.directory=./src/dist --machine-config "entrypoint=/etc/cartesi-init.d/contracts-init && /mnt/app/gateway"
+cartesapp node --log-level debug --dev --dev-watch-patterns='*' --dev-path='./src/dist' --drive-config app.builder=directory --drive-config app.directory=./src/dist
 ```
 
 Any time you regenerate the binaries, it will rebuild its flash drive, replace it on the current snapshot of the machine, and force a reload on the app.
